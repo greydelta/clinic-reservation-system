@@ -111,6 +111,25 @@ public class ConsoleUI {
 	}
 	public void launch() {
 		Staff loginSession = mainMenu();
+		int choice = 0, staff = -1;
+		staff = loginSession.getStaff_type();
+		while(choice != 1) {
+			choice = subMenu(loginSession);
+			if(choice == 8 && staff == 1) {
+				System.out.println("Thank you for using our system!");
+				System.exit(0);
+			}
+			else if(choice == 2 && staff == 2) {
+				System.out.println("Thank you for using our system!");
+				System.exit(0);
+			}
+			else {
+				choice = 0;
+			}
+		}
+	}
+	
+	// B1 : Main Menu Method (main welcome page)
 	public Staff mainMenu() {
 		setScanner(new Scanner(System.in));
 		Staff login = null;
@@ -143,6 +162,40 @@ public class ConsoleUI {
 				}	
 		}while(status != 1);
 		return login;
+	}
+	public int subMenu(Staff loginValid) {
+		int choice = -1;
+
+		System.out.println("\n<<Sub-Menu>>");
+		if(loginValid.getStaff_type() == 1) {
+			System.out.println(" >>Logged In as (Staff): "+loginValid.getStaff_name());
+			System.out.println(" 1. Create Appointment");
+			System.out.println(" 2. Update/Cancel Appointment");
+			System.out.println(" 3. Search Appointment (by Doctor)");
+			System.out.println(" 4. Create Patient Profile");
+			System.out.println(" 5. Update Patient Profile");
+			System.out.println(" 6. View Patient record and Information");
+			System.out.println(" 7. Exit this system");
+			System.out.print(">>Choice: ");
+			try {
+				choice = intInputValidation(1, 7);}
+			catch (IllegalArgumentException e) {
+				System.err.println(e.getMessage());
+				bufferFor5Miliseconds();}
+		}
+		else if(loginValid.getStaff_type() == 2) {
+			System.out.println(" >>Logged In as (Doctor): "+loginValid.getStaff_name());
+			System.out.println(" 1. View Patient record and Information");
+			System.out.println(" 2. Exit this system");
+			System.out.print(">>Choice: ");
+			try {
+				choice = intInputValidation(1, 2);}
+			catch (IllegalArgumentException e) {
+				System.err.println(e.getMessage());
+				bufferFor5Miliseconds();}
+		}
+		
+		return choice;
 	}
 	}
 }
