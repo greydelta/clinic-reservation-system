@@ -8,6 +8,7 @@ public class App {
 	    Controller controller = new Controller(dataLists);
 	    ConsoleUI userInterface = new ConsoleUI();
 	    userInterface.setController(controller);
+	    userInterface.loadAllData();
 	    userInterface.launch();
 	}
 }
