@@ -198,6 +198,8 @@ public class ConsoleUI {
 		return choice;
 	}
 	}
+	
+	// F1 : Combination of Method F2 and F4
 	public int intChoiceInput(int x, int y) {
 		int choice = -1, doWhile = -1;
 		do {
@@ -212,6 +214,8 @@ public class ConsoleUI {
 		}while(doWhile != 1);
 		return choice;
 	}
+	
+	// F2 : Method for integer input validation
 	public int intInputValidation(int lower, int upper) throws IllegalArgumentException {
 		setScanner(new Scanner(System.in));
 		int userInput;
@@ -248,6 +252,8 @@ public class ConsoleUI {
 	        else
 	            throw new IllegalArgumentException("\nEnter integers Only!");
 	}
+	    
+    // Method F3 : Method for string input validation
     public String stringInputValidation() throws IllegalArgumentException{
     	setScanner(new Scanner(System.in));
     	String userInput;
@@ -261,6 +267,9 @@ public class ConsoleUI {
     	else
     		throw new IllegalArgumentException("Scanner is closed");	
     }
+	    
+    /* Method F4 : Pause execution for 5 seconds
+	*****************************************/
     public void bufferFor5Miliseconds() {
     	try {
 			TimeUnit.MILLISECONDS.sleep(500);}
