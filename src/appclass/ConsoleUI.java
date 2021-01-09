@@ -198,4 +198,54 @@ public class ConsoleUI {
 		return choice;
 	}
 	}
+	public int intChoiceInput(int x, int y) {
+		int choice = -1, doWhile = -1;
+		do {
+			System.out.print(">>Choice: ");
+        	try {
+        		choice = intInputValidation(x, y);
+        		doWhile = 1;} 
+        	catch (IllegalArgumentException e) {
+        		System.err.println(e.getMessage());
+        		bufferFor5Miliseconds();
+        		doWhile = 0;}
+		}while(doWhile != 1);
+		return choice;
+	}
+	public int intInputValidation(int lower, int upper) throws IllegalArgumentException {
+		setScanner(new Scanner(System.in));
+		int userInput;
+	        
+		if (scan.hasNextLine()){
+			String tempString = scan.nextLine();
+
+			// Check if blank / only whitespace
+			if(tempString.isEmpty() == true)	
+				throw new IllegalArgumentException("\nNot allowed to enter blank values!");
+			else
+		        // Check if is valid integer
+		        try {
+		        	// Convert to integer
+		        	userInput = Integer.parseInt(tempString);
+		        }
+		        catch (NumberFormatException e) {
+		        	throw new IllegalArgumentException("\nEnter integers Only!");
+		        }
+		        	
+		        // Check if range is same, then can only enter that value
+		        if(lower == upper) 
+		        	if(userInput != lower)
+			            throw new IllegalArgumentException("\nEnter "+lower+" only!");
+			        else
+		            	return userInput;
+		           
+		        // Check if it is within range
+		        if (userInput < lower || userInput > upper)
+		              throw new IllegalArgumentException("\nEnter values between "+lower+" and "+upper+" only!");
+		        else
+		              return userInput;
+	        } 
+	        else
+	            throw new IllegalArgumentException("\nEnter integers Only!");
+	}
 }
