@@ -110,5 +110,39 @@ public class ConsoleUI {
 		System.out.println("Loaded "+count+" rows of data from appointment.txt");
 	}
 	public void launch() {
+		Staff loginSession = mainMenu();
+	public Staff mainMenu() {
+		setScanner(new Scanner(System.in));
+		Staff login = null;
+		int mainMenuChoice, status =-1;
+		
+		do {
+			mainMenuChoice = -1;
+			login = null;
+			System.out.println("\n<<Main Menu>>");
+			System.out.println("==================================");
+			System.out.println("           Welcome to             ");
+			System.out.println("    Clinic Appointment System     ");
+			System.out.println("==================================");
+			System.out.println("Would you like to,");
+			System.out.println("1. Login as Staff/Doctor");
+			System.out.println("2. Exit this system");
+			
+			mainMenuChoice = intChoiceInput(1, 2);
+					
+			switch(mainMenuChoice){
+				case 1: 
+					login = login();
+					if(login != null)
+						status = 1;
+					break;
+				case 2:
+					System.out.println("\nThank you & have a nice day!");
+					System.exit(0);
+					break;
+				}	
+		}while(status != 1);
+		return login;
+	}
 	}
 }
