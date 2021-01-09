@@ -248,4 +248,23 @@ public class ConsoleUI {
 	        else
 	            throw new IllegalArgumentException("\nEnter integers Only!");
 	}
+    public String stringInputValidation() throws IllegalArgumentException{
+    	setScanner(new Scanner(System.in));
+    	String userInput;
+    	if (scan.hasNextLine()){
+    		userInput = scan.nextLine();
+    		if(userInput.isEmpty() == true)
+        		throw new IllegalArgumentException("Not allowed to enter blank values!");
+    		else
+    			return userInput;
+    	}
+    	else
+    		throw new IllegalArgumentException("Scanner is closed");	
+    }
+    public void bufferFor5Miliseconds() {
+    	try {
+			TimeUnit.MILLISECONDS.sleep(500);}
+		catch (InterruptedException e1) {
+			System.err.print(e1.getMessage());}
+    }
 }
