@@ -9,14 +9,20 @@ import java.util.Scanner;
 
 public class ConsoleUI {
 
+	/* Variables
+	****************************************/
 	private Scanner scan;
 	private Controller control;
 	
+	/* Constructor 
+	****************************************/
 	public ConsoleUI() {
 		scan = null;
 		control = null;
 	}
 	
+	/* Accessor Methods
+	*****************************************/
 	public void setScanner(Scanner sc) {
 		this.scan = sc;
 	}
@@ -26,12 +32,14 @@ public class ConsoleUI {
 	public Controller getController() {
 		return control;
 	}
+	// A0 : Initiate all load methods
 	public void loadAllData() {
 		loadStaffData();
 		loadPatientData();
 		loadAppointmentData();
 	}
 	
+	// A1 : Load data from staff.txt
 	public void loadStaffData() {
 		File staff = new File("staff.txt");
 		try {
@@ -54,6 +62,7 @@ public class ConsoleUI {
 		System.out.println("Loaded "+count+" rows of data from staff.txt");
 	}
 	
+	// A2 : Load data from patient.txt
 	public void loadPatientData() {
 		File patient = new File("patient.txt");
 		try {
@@ -75,6 +84,7 @@ public class ConsoleUI {
 		System.out.println("Loaded "+count+" rows of data from patient.txt");
 	}
 	
+	// A3 : Load data from appointment.txt
 	public void loadAppointmentData() {
 		File patient = new File("appointment.txt");
 		try {
