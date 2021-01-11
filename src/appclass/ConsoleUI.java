@@ -195,6 +195,14 @@ public class ConsoleUI {
 				bufferFor5Miliseconds();}
 		}
 		
+	public Staff validateStaff(String id, String pass) {
+		List<Staff> staff = control.getAllStaffs();
+		for (Staff tempStaff: staff) {
+			if(id.equals(tempStaff.getStaff_id()) && pass.equals(tempStaff.getStaff_password()))
+				return tempStaff;
+		}
+		return null;
+	}
 		return choice;
 	}
 	}
