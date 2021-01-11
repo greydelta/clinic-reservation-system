@@ -195,6 +195,73 @@ public class ConsoleUI {
 				bufferFor5Miliseconds();}
 		}
 		
+	public Staff login() {
+		int signInChoice = -1, doWhile1 = -1, doWhile2 = -1, doWhile3 = -1,
+			innerDoWhile1 = -1, innerDoWhile2 = -1;
+		Staff loginValid = null;
+		String id = null, pass = null;
+		
+		do { // doWhile3
+			do { //doWhile1
+				System.out.println("\n<<Login>>");
+				
+				do { // innerDoWhile1
+					System.out.print("Enter ID: ");
+					// Check if input is valid
+					try {
+						id = stringInputValidation();
+						innerDoWhile1 = 1;}
+					catch (IllegalArgumentException e) {
+						System.err.println(e.getMessage());
+						bufferFor5Miliseconds();
+						innerDoWhile1 = 0;}
+				}while(innerDoWhile1 != 1);
+				
+				do {
+					System.out.print("Enter Password: ");
+					// Check if input is valid
+					try {
+						pass = stringInputValidation();
+						innerDoWhile2 = 1;}   
+					catch (IllegalArgumentException e) {
+						System.err.println(e.getMessage());
+						bufferFor5Miliseconds();
+						innerDoWhile2 = 0;}
+				}while(innerDoWhile2 != 1);
+				
+				// Both input are valid, proceed to validate
+				loginValid = validateStaff(id, pass);
+				doWhile1 = 1;
+			}while(doWhile1 != 1);
+			
+			if(loginValid != null) {
+				//System.out.println("\nLogged in as: " + loginValid.getStaff_name());
+				doWhile3 = 1;
+			}
+			else {
+				do {
+					System.out.println("\nIncorrect name/password.");
+					System.out.println("1. Login again");
+					System.out.println("2. Exit to Main Menu");
+					signInChoice = intChoiceInput(1, 2);
+					
+					if(signInChoice == 1) {
+						doWhile1 = 0; 
+						doWhile2 = 1; // Prompt enter input
+						doWhile3 = 0;
+						innerDoWhile1 = 0;
+						innerDoWhile2 = 0;
+					}
+					else if(signInChoice == 2) {
+						return loginValid;
+					}
+				}while(doWhile2 != 1);
+			}
+			
+		}while(doWhile3 != 1);
+		
+		return loginValid;
+	}
 	public Staff validateStaff(String id, String pass) {
 		List<Staff> staff = control.getAllStaffs();
 		for (Staff tempStaff: staff) {
