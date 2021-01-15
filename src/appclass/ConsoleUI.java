@@ -279,6 +279,14 @@ public class ConsoleUI {
 		}
 		return null;
 	}
+	public void createAppointment() {
+		String name = null, contact = null, status = null, date = null, time = null;
+    	int id = 0, flag = -1; Staff doc = new Staff();
+    	Patient exist = new Patient();
+    	List<Appointment> appointment = control.getAllAppointments();
+
+    	System.out.println("\n<<Create Appointment>>");
+	}
 		return choice;
 	}
 	}
