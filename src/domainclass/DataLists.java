@@ -25,4 +25,16 @@ public class DataLists implements IDataStore{
 	public List<Appointment> getAllAppointments(){
 		return this.appointment;
 	}
+	
+	// Methods
+	public void addStaff(Staff stf){
+		this.staff.add(stf);
+	}
+	public void addPatient(Patient pti){
+		this.patient.add(pti);
+	}
+	
+	public void addAppointment(Appointment appt){
+		this.appointment.add(appt);
+	}
 }
