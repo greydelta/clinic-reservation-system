@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class ConsoleUI {
 
@@ -109,6 +110,8 @@ public class ConsoleUI {
 		}
 		System.out.println("Loaded "+count+" rows of data from appointment.txt");
 	}
+	
+	// B0 : Initiate launch for Main Menu and Sub-Menus
 	public void launch() {
 		Staff loginSession = mainMenu();
 		int choice = 0, staff = -1;
@@ -163,6 +166,8 @@ public class ConsoleUI {
 		}while(status != 1);
 		return login;
 	}
+	
+	// B2 : Sub-Menu (can be accessed after successful login)
 	public int subMenu(Staff loginValid) {
 		int choice = -1;
 
@@ -195,6 +200,8 @@ public class ConsoleUI {
 				bufferFor5Miliseconds();}
 		}
 		
+	
+	// B3 : Login Method to verify login credentials
 	public Staff login() {
 		int signInChoice = -1, doWhile1 = -1, doWhile2 = -1, doWhile3 = -1,
 			innerDoWhile1 = -1, innerDoWhile2 = -1;
@@ -262,6 +269,8 @@ public class ConsoleUI {
 		
 		return loginValid;
 	}
+	
+	// B4 : Method to validate login credentials exist in database
 	public Staff validateStaff(String id, String pass) {
 		List<Staff> staff = control.getAllStaffs();
 		for (Staff tempStaff: staff) {
