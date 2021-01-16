@@ -304,6 +304,20 @@ public class ConsoleUI {
 		}while(doWhile != 1);
 		return name;
 	}
+	public String promptInputPatientContact() {
+		int doWhile = -1; String contact = null;
+		do {
+			System.out.print("Enter Patient Contact: ");
+			try {
+				contact = stringInputValidation();
+				doWhile = 1;
+			}   
+			catch (IllegalArgumentException e) {
+				System.err.println(e.getMessage());
+				bufferFor5Miliseconds();
+				doWhile = 0;} 
+		}while(doWhile != 1);
+		return contact;
 	}
 	
 	// F1 : Combination of Method F2 and F4
