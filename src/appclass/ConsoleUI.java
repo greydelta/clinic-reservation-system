@@ -289,6 +289,21 @@ public class ConsoleUI {
 	}
 		return choice;
 	}
+	public String promptInputPatientName() {
+		int doWhile = -1; String name = null;
+		do {
+			System.out.print("Enter Patient Name: ");
+			try {
+				name = stringInputValidation();
+				doWhile = 1;
+			}   
+			catch (IllegalArgumentException e) {
+				System.err.println(e.getMessage());
+				bufferFor5Miliseconds();
+				doWhile = 0;} 
+		}while(doWhile != 1);
+		return name;
+	}
 	}
 	
 	// F1 : Combination of Method F2 and F4
