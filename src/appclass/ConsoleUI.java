@@ -320,6 +320,19 @@ public class ConsoleUI {
 		return contact;
 	}
 	
+	public Patient checkIfPatientExist(String name, String contact) {
+    	List<Patient> patient = control.getAllPatients();
+		
+		for (Patient tempPatient: patient) {
+			if(tempPatient.getPatient_name().equals(name))
+				if(tempPatient.getPatient_contact().equals(contact))
+					return tempPatient; // exist
+			else
+				continue; // doesnt exist
+		}
+		return null;
+	}
+	
 	// F1 : Combination of Method F2 and F4
 	public int intChoiceInput(int x, int y) {
 		int choice = -1, doWhile = -1;
