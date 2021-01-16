@@ -200,6 +200,12 @@ public class ConsoleUI {
 				bufferFor5Miliseconds();}
 		}
 		
+		switch(choice) {
+			case 1: 
+				if(loginValid.getStaff_type() == 1)
+					createAppointment();
+		return choice;
+	}
 	
 	// B3 : Login Method to verify login credentials
 	public Staff login() {
@@ -286,6 +292,17 @@ public class ConsoleUI {
     	List<Appointment> appointment = control.getAllAppointments();
 
     	System.out.println("\n<<Create Appointment>>");
+    	
+    	name = promptInputPatientName();
+    	contact = promptInputPatientContact();
+		exist = checkIfPatientExist(name, contact);
+    	
+		if(exist != null) {
+			System.out.println("<<Patient Exist!>>");
+		}
+		else
+			System.out.println("<<Patient Does Not Exist!>>");
+	}
 	}
 		return choice;
 	}
