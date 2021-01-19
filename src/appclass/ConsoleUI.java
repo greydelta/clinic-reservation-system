@@ -304,6 +304,23 @@ public class ConsoleUI {
 			System.out.println("<<Patient Does Not Exist!>>");
 	}
 	}
+	public int promptInputAppointmentStatus() {
+		int doWhile = -1, choice = 0;
+		do {
+			System.out.println("<<Enter Appointment Status>>");
+			System.out.println("1. Booked");
+			System.out.println("2. Consulted");
+			System.out.println("3. Cancelled");
+			System.out.print(">> Choice: ");
+			try {
+				choice = intInputValidation(1, 3);
+				doWhile = 1;
+			}   
+			catch (IllegalArgumentException e) {
+				System.err.println(e.getMessage());
+				bufferFor5Miliseconds();
+				doWhile = 0;} 
+		}while(doWhile != 1);
 		return choice;
 	}
 	public String promptInputPatientName() {
