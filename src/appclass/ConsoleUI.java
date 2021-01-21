@@ -338,6 +338,21 @@ public class ConsoleUI {
 		}while(doWhile != 1);
 		return date;
 	}
+	public String promptInputAppointmentTime() {
+		int doWhile = -1; String time = null;
+		do {
+			System.out.print("Enter Appointment Time (HH:MM): ");
+			try {
+				time = stringInputValidation();
+				doWhile = 1;
+			}   
+			catch (IllegalArgumentException e) {
+				System.err.println(e.getMessage());
+				bufferFor5Miliseconds();
+				doWhile = 0;} 
+		}while(doWhile != 1);
+		return time;
+	}
 	public String promptInputPatientName() {
 		int doWhile = -1; String name = null;
 		do {
