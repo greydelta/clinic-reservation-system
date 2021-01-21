@@ -323,6 +323,21 @@ public class ConsoleUI {
 		}while(doWhile != 1);
 		return choice;
 	}
+	public String promptInputAppointmentDate() {
+		int doWhile = -1; String date = null;
+		do {
+			System.out.print("Enter Appointment Date (DD/MM/YYYY): ");
+			try {
+				date = stringInputValidation();
+				doWhile = 1;
+			}   
+			catch (IllegalArgumentException e) {
+				System.err.println(e.getMessage());
+				bufferFor5Miliseconds();
+				doWhile = 0;} 
+		}while(doWhile != 1);
+		return date;
+	}
 	public String promptInputPatientName() {
 		int doWhile = -1; String name = null;
 		do {
