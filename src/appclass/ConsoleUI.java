@@ -353,6 +353,17 @@ public class ConsoleUI {
 		}while(doWhile != 1);
 		return time;
 	}
+	public Staff validateDoctor(String id) {
+		List<Staff> staff = control.getAllStaffs();
+		for (Staff tempStaff: staff) {
+			if(tempStaff.getStaff_type() == 2) 
+				if(tempStaff.getStaff_id().equals(id))
+					return tempStaff;
+			else
+				continue;
+		}
+		return null;
+	}
 	public String promptInputPatientName() {
 		int doWhile = -1; String name = null;
 		do {
