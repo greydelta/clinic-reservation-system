@@ -353,6 +353,43 @@ public class ConsoleUI {
 		}while(doWhile != 1);
 		return time;
 	}
+	public Staff promptInputAppointmentDoc() {
+		int doWhile = -1, innerDoWhile = -1; String doc = null;
+		List<Staff> staff = control.getAllStaffs();
+		Staff docFound = new Staff();
+		
+		do {
+			System.out.println("<<Enter Appointment Doctor>>");
+			int count = 1;
+			for (Staff tempStaff: staff) {
+				if(tempStaff.getStaff_type() == 2) {
+					System.out.println(count+". "+tempStaff.getStaff_name()+" ("+tempStaff.getStaff_id()+")");
+					count++;
+				}
+			}
+			do {
+				System.out.print(">> Choice (Enter DocID): ");
+				try {
+					doc = stringInputValidation();
+					docFound = validateDoctor(doc);
+					if(docFound != null) {
+						innerDoWhile = 1;
+						doWhile = 1;
+					}
+					else {
+						System.out.println("<<Incorrect DocID!>>");
+						innerDoWhile = 0;
+					}	
+				}   
+				catch (IllegalArgumentException e) {
+					System.err.println(e.getMessage());
+					bufferFor5Miliseconds();
+					innerDoWhile = 0;} 
+			}while(innerDoWhile != 1);
+		
+		}while(doWhile != 1);
+		return docFound;
+	}
 	public Staff validateDoctor(String id) {
 		List<Staff> staff = control.getAllStaffs();
 		for (Staff tempStaff: staff) {
