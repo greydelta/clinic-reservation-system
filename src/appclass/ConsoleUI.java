@@ -401,6 +401,18 @@ public class ConsoleUI {
 		}
 		return null;
 	}
+	public String convertStatus(int status) {
+		switch(status) {
+			case 1:
+				return "Booked";
+			case 2: 
+				return "Consulted";
+			case 3:
+				return "Cancelled";
+			default:
+				return null;
+		}
+	}
 	public String promptInputPatientName() {
 		int doWhile = -1; String name = null;
 		do {
