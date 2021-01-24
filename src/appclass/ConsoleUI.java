@@ -204,6 +204,17 @@ public class ConsoleUI {
 			case 1: 
 				if(loginValid.getStaff_type() == 1)
 					createAppointment();
+				break;
+			case 2: 
+				if(loginValid.getStaff_type() == 1)
+					updateAppointment();
+				else
+					choice = 8;
+				break;
+			case 7:
+				choice = 8;
+				break;
+		}
 		return choice;
 	}
 	
@@ -323,6 +334,23 @@ public class ConsoleUI {
 				System.out.println("\n>> New Appointment Created for " +name+" ("+contact+")");
 			}
 		}
+		else
+			System.out.println("<<Patient Does Not Exist!>>");
+	}
+	public void updateAppointment() {
+		String name = null, contact = null, status = null, date = null, time = null;
+    	int choice = 0, num = 0; //Staff doc = new Staff();
+    	Patient exist = new Patient();
+    	List<Appointment> appointment = control.getAllAppointments();
+
+    	System.out.println("\n<<Update Appointment>>");
+    	
+    	name = promptInputPatientName();
+    	contact = promptInputPatientContact();
+		exist = checkIfPatientExist(name, contact);
+    	
+		if(exist != null) {
+			System.out.println("<<Patient Exist!>>");
 		else
 			System.out.println("<<Patient Does Not Exist!>>");
 	}
