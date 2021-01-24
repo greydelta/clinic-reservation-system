@@ -299,6 +299,29 @@ public class ConsoleUI {
     	
 		if(exist != null) {
 			System.out.println("<<Patient Exist!>>");
+			
+			for(Appointment tempAppt: appointment) {
+				if(tempAppt.getAppointment_patient().getPatient_id() == exist.getPatient_id())
+					if(tempAppt.getAppointment_status().equals("Booked")) {
+						flag = 1;
+						break;
+					}
+			}
+			
+			if(flag == 1) {
+				System.out.println("<<There is an existing booking!>>");
+			}
+			else {
+				// Generate Appointment ID
+		    	id = appointment.size() + 1 ;
+				status = convertStatus(promptInputAppointmentStatus());
+				date = promptInputAppointmentDate();
+				time = promptInputAppointmentTime();
+		    	doc = promptInputAppointmentDoc();
+				
+		    	control.addAppointment(id, status, date, time, doc, exist);
+				System.out.println("\n>> New Appointment Created for " +name+" ("+contact+")");
+			}
 		}
 		else
 			System.out.println("<<Patient Does Not Exist!>>");
