@@ -393,6 +393,13 @@ public class ConsoleUI {
 					choice = intChoiceInput(1, 4);
 				
 					switch(choice) {
+						case 1:
+							break;
+						case 2:
+							date = promptInputAppointmentDate();
+							control.updateAppointmentDate(id, date);
+							System.out.println("<<Date updated to: "+date+">>");
+							break;
 						case 3:
 							time = promptInputAppointmentTime();
 							control.updateAppointmentTime(id, time);
