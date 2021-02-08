@@ -394,6 +394,32 @@ public class ConsoleUI {
 				
 					switch(choice) {
 						case 1:
+							// Check if patient has an active booking, if yes flag = 1
+							for(Appointment tempAppt: appointment) {
+								if(tempAppt.getAppointment_patient().getPatient_id() == exist.getPatient_id())
+									if(tempAppt.getAppointment_status().equals("Booked")) {
+										flag = 1;
+										break;
+									}
+							}
+							
+							int flag1 = -1;
+							if(flag == 1) { // has active appointment
+								if(flag1 != 1) // user choose active booking "Booked" to update to => "Booked"
+									status = convertStatus(promptInputAppointmentStatus());
+									if(status == "Booked")
+										System.out.println("<<Not allowed to update to 'Booked' as there is an existing booking!>>");
+									else { // user choose to update active booking "Booked" to either "Consulted" or "Cancelled"
+										control.updateAppointmentStatus(id, status);
+										System.out.println("<<Status updated to: "+status+">>");
+										break;
+									}
+							} 
+							else {  // no active appointment
+								status = convertStatus(promptInputAppointmentStatus());
+								control.updateAppointmentStatus(id, status);
+								System.out.println("<<Status updated to: "+status+">>");
+							}
 							break;
 						case 2:
 							date = promptInputAppointmentDate();
