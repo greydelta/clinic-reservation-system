@@ -11,4 +11,7 @@ public interface IDataStore {
 	public void addPatient(Patient pti);
 	
 	public void addAppointment(Appointment appt);
+	public void updateAppointmentStatus(int appointment_id, String appointment_status);
+	public void updateAppointmentDate(int appointment_id, String appointment_date);
+	public void updateAppointmentTime(int appointment_id, String appointment_time);
 }

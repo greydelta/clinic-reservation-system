@@ -46,4 +46,15 @@ public class Controller {
 		dataLists.addAppointment(appointment);
 	}
 	
+	public void updateAppointmentStatus(int appointment_id, String appointment_status) {
+		dataLists.updateAppointmentStatus(appointment_id, appointment_status);
+	}
+	
+	public void updateAppointmentDate(int appointment_id, String appointment_date){
+		dataLists.updateAppointmentDate(appointment_id, appointment_date);
+	}
+	
+	public void updateAppointmentTime(int appointment_id, String appointment_time) {
+		dataLists.updateAppointmentTime(appointment_id, appointment_time);
+	}
 }

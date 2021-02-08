@@ -37,4 +37,28 @@ public class DataLists implements IDataStore{
 	public void addAppointment(Appointment appt){
 		this.appointment.add(appt);
 	}
+	public void updateAppointmentStatus(int appointment_id, String appointment_status) {
+		int count = -1;
+		for (Appointment tempAppointment: this.appointment) { 
+			++count;
+			if(tempAppointment.getAppointment_id() == appointment_id) // find appointment
+				this.appointment.get(count).setAppointment_status(appointment_status);
+		}
+	}
+	public void updateAppointmentDate(int appointment_id, String appointment_date) {
+		int count = -1;
+		for (Appointment tempAppointment: this.appointment) {
+			++count;
+			if(tempAppointment.getAppointment_id() == appointment_id) // find appointment
+				this.appointment.get(count).setAppointment_date(appointment_date);
+		}
+	}
+	public void updateAppointmentTime(int appointment_id, String appointment_time) {
+		int count = -1;
+		for (Appointment tempAppointment: this.appointment) {
+			++count;
+			if(tempAppointment.getAppointment_id() == appointment_id) // find appointment
+				this.appointment.get(count).setAppointment_time(appointment_time);
+		}
+	}
 }
