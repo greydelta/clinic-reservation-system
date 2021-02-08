@@ -351,6 +351,61 @@ public class ConsoleUI {
     	
 		if(exist != null) {
 			System.out.println("<<Patient Exist!>>");
+			int count = 0, noBooking = 0;
+			List<String> listToStoreID = new ArrayList<>();
+
+			System.out.println("Num  Status\tDate\t\tTime\tDoctor\t\tPatient Name");
+			System.out.println("---  ---------\t----------\t-----\t-----------\t-------------");
+			
+			// generate list of appointment by this patient
+			for(Appointment tempApt : appointment) {
+				count++; 
+				if(tempApt.getAppointment_patient().getPatient_id() == exist.getPatient_id()) {
+					num++;
+					System.out.println(num+".   "+tempApt.getAppointment_status()
+									+"\t"+tempApt.getAppointment_date() +"\t"+tempApt.getAppointment_time()
+									+"\t"+tempApt.getAppointment_doc().getStaff_name()
+									+"\t\t"+tempApt.getAppointment_patient().getPatient_name());
+					listToStoreID.add(String.valueOf(tempApt.getAppointment_id()));
+				}
+				else {
+					noBooking++;
+					continue;
+				}
+			}
+			
+			if(noBooking == count) {
+				System.out.println("<<No booking found!>>");
+			}
+			else {
+				System.out.println("<<Choose booking to update>>");
+				int diff = count - noBooking;
+				choice = intChoiceInput(1, diff);
+				int id = Integer.parseInt(listToStoreID.get(choice-1).toString());
+				
+				do {
+					int flag = -1;
+					System.out.println("<<Select component to update>>");
+					System.out.println("1. Appointment Status");
+					System.out.println("2. Appointment Date");
+					System.out.println("3. Appointment Time");
+					System.out.println("4. Return to Sub-Menu");
+					choice = intChoiceInput(1, 4);
+				
+					switch(choice) {
+						case 3:
+							time = promptInputAppointmentTime();
+							control.updateAppointmentTime(id, time);
+							System.out.println("<<Time updated to: "+time+">>");
+							break;
+						case 4:
+							break;
+					}
+					
+					System.out.println("\n>> Appointment Updated for " +name+" ("+contact+")");
+				}while(choice != 4);
+			}
+		}
 		else
 			System.out.println("<<Patient Does Not Exist!>>");
 	}
