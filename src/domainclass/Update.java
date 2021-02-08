@@ -84,4 +84,32 @@ public class Update {
 		this.postcod = postcod;
 	}
 
+
+	// method
+	public static ArrayList<Update> initializeUpdate(String filepath) {
+
+		ArrayList<Update> reservation = new ArrayList<Update>();
+		String resID,bookingDate,fname,lname,age,state, postcod;
+
+		try {
+			Scanner x = new Scanner(new File(filepath));
+			x.useDelimiter("[,\n]");
+
+			while (x.hasNext()) {
+				resID = x.next();
+				bookingDate = x.next();
+				fname = x.next();
+				lname = x.next();
+				age = x.next();
+				state = x.next();
+				postcod = x.next();
+			}
+		} catch (Exception e) {
+			System.out.println("create arrayReservation reservation.txt has error!");
+		}
+
+		return reservation;
+	}
+
+	
 }
