@@ -54,4 +54,11 @@ public class Staff {
 	public void setStaff_type(int staff_type) {
 		this.staff_type = staff_type;
 	}
+	
+	public void setStaff_all(String staff_id, String staff_password, String staff_name, int staff_type) {
+		this.setStaff_id(staff_id);
+		this.setStaff_password(staff_password);
+		this.setStaff_name(staff_name);
+		this.setStaff_type(staff_type);
+	}
 }

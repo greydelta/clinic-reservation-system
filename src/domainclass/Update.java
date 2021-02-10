@@ -112,4 +112,30 @@ public class Update {
 	}
 
 	
+
+	public void updateReservation(ArrayList<Update> arrReservation, String filepath) throws IOException {
+		FileWriter old = new FileWriter(filepath);
+		old.write("");
+		old.close();
+
+		FileWriter update = new FileWriter(filepath, true);
+		for (int i = 0; i < arrReservation.size(); i++) {
+			if (arrReservation.get(i).getID().equals(resID))
+				arrReservation.set(i, this);
+
+			update.write(arrReservation.get(i).getID() + ","
+					+ arrReservation.get(i).bookingDate + "," + arrReservation.get(i).fname + ","
+					+ arrReservation.get(i).lname + "," + arrReservation.get(i).age + ","
+					+ arrReservation.get(i).state + "," +arrReservation.get(i).postcod + ","
+					+ "\n");
+		}
+
+		update.close();
+	}
+	
+	/*protected static Update n;
+	public static void main(String[] args) {
+		n = new Update();
+		n.initializeUpdate("update.txt");
+	}*/
 }
