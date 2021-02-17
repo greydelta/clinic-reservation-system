@@ -33,6 +33,11 @@ public class ConsoleUI {
 	public Controller getController() {
 		return control;
 	}
+	
+	/* ===================================================================
+	 * =========== Section A : Load data from txt file methods ===========
+	 * =================================================================== */
+	
 	// A0 : Initiate all load methods
 	public void loadAllData() {
 		loadStaffData();
@@ -110,6 +115,10 @@ public class ConsoleUI {
 		}
 		System.out.println("Loaded "+count+" rows of data from appointment.txt");
 	}
+	
+	/* ===================================================================
+	 * =========== Section B : Menu / Sub-Menu / Login methods ===========
+	 * =================================================================== */
 	
 	// B0 : Initiate launch for Main Menu and Sub-Menus
 	public void launch() {
@@ -296,6 +305,12 @@ public class ConsoleUI {
 		}
 		return null;
 	}
+	
+	/* ===================================================================
+	 * ==== Section C : Create/Update/Search/View Appointment methods ====
+	 * =================================================================== */
+	
+	// C1 : Create Appointment Method
 	public void createAppointment() {
 		String name = null, contact = null, status = null, date = null, time = null;
     	int id = 0, flag = -1; Staff doc = new Staff();
@@ -337,6 +352,8 @@ public class ConsoleUI {
 		else
 			System.out.println("<<Patient Does Not Exist!>>");
 	}
+	
+	// C2 : Update Appointment Method
 	public void updateAppointment() {
 		String name = null, contact = null, status = null, date = null, time = null;
     	int choice = 0, num = 0; //Staff doc = new Staff();
@@ -583,6 +600,7 @@ public class ConsoleUI {
 		return contact;
 	}
 	
+	// D4 : Method to validate if patient exist in database
 	public Patient checkIfPatientExist(String name, String contact) {
     	List<Patient> patient = control.getAllPatients();
 		
@@ -595,6 +613,10 @@ public class ConsoleUI {
 		}
 		return null;
 	}
+	
+	/* ===================================================================
+	 * =================== Section F : Utility methods ===================
+	 * =================================================================== */
 	
 	// F1 : Combination of Method F2 and F4
 	public int intChoiceInput(int x, int y) {
