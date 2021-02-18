@@ -498,6 +498,29 @@ public class ConsoleUI {
 					bufferFor5Miliseconds();
 					innerDoWhile = 0;} 
 			}while(innerDoWhile != 1);
+			
+			List<Appointment> appointment = control.getAllAppointments();
+			int count1 = 0, num = 0, noBooking = 0;
+			List<String> listToStoreID = new ArrayList<>();
+			
+			System.out.println("Num  Status\tDate\t\tTime\tDoctor\t\tPatient Name");
+			System.out.println("---  ---------\t----------\t-----\t-----------\t-------------");
+			for(Appointment tempApt : appointment) {
+				count1++; 
+				if(tempApt.getAppointment_doc().getStaff_id().equals(docFound.getStaff_id())) {
+					num++;
+					System.out.println(num+".   "+tempApt.getAppointment_status()
+									+"\t"+tempApt.getAppointment_date() +"\t"+tempApt.getAppointment_time()
+									+"\t"+tempApt.getAppointment_doc().getStaff_name()
+									+"\t\t"+tempApt.getAppointment_patient().getPatient_name());
+					listToStoreID.add(String.valueOf(tempApt.getAppointment_id()));
+				}
+				else {
+					noBooking++;
+					continue;
+				}
+			}
+			
 		}while(doWhile != 1);
 	}
 	public int promptInputAppointmentStatus() {
