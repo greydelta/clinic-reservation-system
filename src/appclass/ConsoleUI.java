@@ -523,6 +523,8 @@ public class ConsoleUI {
 			
 		}while(doWhile != 1);
 	}
+	
+	// C4 : View Appointment Method
 	public void viewPatientRecord() {
 		String name = null, contact = null;
     	
@@ -540,6 +542,8 @@ public class ConsoleUI {
 		else
 			System.out.println("<<Patient Does Not Exist!>>");
 	}
+	
+	// C5(A) : Prompt User Input Appointment Status
 	public int promptInputAppointmentStatus() {
 		int doWhile = -1, choice = 0;
 		do {
@@ -559,6 +563,8 @@ public class ConsoleUI {
 		}while(doWhile != 1);
 		return choice;
 	}
+	
+	// C5(B) : Prompt User Input Appointment Date
 	public String promptInputAppointmentDate() {
 		int doWhile = -1; String date = null;
 		do {
@@ -574,6 +580,8 @@ public class ConsoleUI {
 		}while(doWhile != 1);
 		return date;
 	}
+	
+	// C5(C) : Prompt User Input Appointment Time
 	public String promptInputAppointmentTime() {
 		int doWhile = -1; String time = null;
 		do {
@@ -589,6 +597,8 @@ public class ConsoleUI {
 		}while(doWhile != 1);
 		return time;
 	}
+	
+	// C5(D) : Prompt User Input Appointment Doctor
 	public Staff promptInputAppointmentDoc() {
 		int doWhile = -1, innerDoWhile = -1; String doc = null;
 		List<Staff> staff = control.getAllStaffs();
@@ -626,6 +636,8 @@ public class ConsoleUI {
 		}while(doWhile != 1);
 		return docFound;
 	}
+	
+	// C6 : Method to validate if doctor exist in database
 	public Staff validateDoctor(String id) {
 		List<Staff> staff = control.getAllStaffs();
 		for (Staff tempStaff: staff) {
@@ -637,6 +649,8 @@ public class ConsoleUI {
 		}
 		return null;
 	}
+
+	// C7 : Method to convert appointment status from integer to string
 	public String convertStatus(int status) {
 		switch(status) {
 			case 1:
