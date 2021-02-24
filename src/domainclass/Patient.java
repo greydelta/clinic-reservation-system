@@ -43,4 +43,10 @@ public class Patient {
 	public void setPatient_contact(String patient_contact) {
 		this.patient_contact = patient_contact;
 	}
+	
+	public void setPatient_all(int patient_id, String patient_name, String patient_contact) {
+		this.setPatient_id(patient_id);
+		this.setPatient_name(patient_name);
+		this.setPatient_contact(patient_contact);
+	}
 }

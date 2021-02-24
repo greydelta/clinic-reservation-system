@@ -523,6 +523,23 @@ public class ConsoleUI {
 			
 		}while(doWhile != 1);
 	}
+	public void viewPatientRecord() {
+		String name = null, contact = null;
+    	
+    	Patient exist = new Patient();
+    	List<Appointment> appointment = control.getAllAppointments();
+
+    	System.out.println("\n<<View Patient Record>>");
+    	
+    	name = promptInputPatientName();
+    	contact = promptInputPatientContact();
+		exist = checkIfPatientExist(name, contact);
+    	
+		if(exist != null) {
+			System.out.println("<<Patient Exist!>>");
+		else
+			System.out.println("<<Patient Does Not Exist!>>");
+	}
 	public int promptInputAppointmentStatus() {
 		int doWhile = -1, choice = 0;
 		do {
