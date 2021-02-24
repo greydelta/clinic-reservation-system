@@ -213,6 +213,8 @@ public class ConsoleUI {
 			case 1: 
 				if(loginValid.getStaff_type() == 1)
 					createAppointment();
+				else
+					viewPatientRecord();
 				break;
 			case 2: 
 				if(loginValid.getStaff_type() == 1)
@@ -222,6 +224,9 @@ public class ConsoleUI {
 				break;
 			case 3:
 				searchAppointment();
+				break;
+			case 6:
+				viewPatientRecord();
 				break;
 			case 7:
 				choice = 8;
@@ -539,6 +544,25 @@ public class ConsoleUI {
     	
 		if(exist != null) {
 			System.out.println("<<Patient Exist!>>");
+			int count = 0, num = 0, noBooking = 0;
+			List<String> listToStoreID = new ArrayList<>();
+
+			System.out.println("Num  Status\tDate\t\tTime\tDoctor\t\tPatient Name");
+			System.out.println("---  ---------\t----------\t-----\t-----------\t-------------");
+			
+			// generate list of appointment by this patient
+			for(Appointment tempApt : appointment) {
+				count++; 
+				if(tempApt.getAppointment_patient().getPatient_id() == exist.getPatient_id()) {
+					num++;
+					System.out.println(num+".   "+tempApt.getAppointment_status()
+									+"\t"+tempApt.getAppointment_date() +"\t"+tempApt.getAppointment_time()
+									+"\t"+tempApt.getAppointment_doc().getStaff_name()
+									+"\t\t"+tempApt.getAppointment_patient().getPatient_name());
+					listToStoreID.add(String.valueOf(tempApt.getAppointment_id()));
+				}
+			}
+		}
 		else
 			System.out.println("<<Patient Does Not Exist!>>");
 	}
