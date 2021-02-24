@@ -561,6 +561,14 @@ public class ConsoleUI {
 									+"\t\t"+tempApt.getAppointment_patient().getPatient_name());
 					listToStoreID.add(String.valueOf(tempApt.getAppointment_id()));
 				}
+				else {
+					noBooking++;
+					continue;
+				}
+			}
+			
+			if(noBooking == count) {
+				System.out.println("<<No booking found!>>");
 			}
 		}
 		else
