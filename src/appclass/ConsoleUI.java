@@ -225,6 +225,9 @@ public class ConsoleUI {
 			case 3:
 				searchAppointment();
 				break;
+			case 4:
+				createPatientProfile();
+				break;
 			case 6:
 				viewPatientRecord();
 				break;
@@ -695,6 +698,20 @@ public class ConsoleUI {
 				return null;
 		}
 	}
+	
+	/* ===================================================================
+	 * ======== Section D : Create/Update Patient Profile methods ========
+	 * =================================================================== */
+
+	// D1 : Create Patient Profile Method
+	public void createPatientProfile() {
+		String name = null, contact = null;
+    	int id = 0;
+    	Patient exist = new Patient();
+    	List<Patient> patient = control.getAllPatients();
+
+    	System.out.println("\n<<Create Patient Profile>>");
+    }
 	public String promptInputPatientName() {
 		int doWhile = -1; String name = null;
 		do {
