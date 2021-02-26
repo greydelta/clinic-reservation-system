@@ -711,6 +711,23 @@ public class ConsoleUI {
     	List<Patient> patient = control.getAllPatients();
 
     	System.out.println("\n<<Create Patient Profile>>");
+    	// Generate Patient ID
+    	id = patient.size() + 1 ;
+    	
+    	name = promptInputPatientName();
+    	contact = promptInputPatientContact();
+
+		exist = checkIfPatientExist(name, contact);
+		
+		if(exist != null) {
+			System.out.println("<<Patient Exist!>>");
+			System.out.println("\n>> New Patient Profile Not Created!");
+		}
+		else {
+			control.addPatient(id, name, contact);
+			System.out.println("\n>> New Patient Profile Created for " +name+" ("+contact+")");
+		}
+    }
     }
 	public String promptInputPatientName() {
 		int doWhile = -1; String name = null;
