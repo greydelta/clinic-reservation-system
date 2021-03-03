@@ -728,7 +728,11 @@ public class ConsoleUI {
 			System.out.println("\n>> New Patient Profile Created for " +name+" ("+contact+")");
 		}
     }
+
+	// D2 : Update Patient Profile Method
     }
+
+	// D3(A) : Prompt User Input Patient Name
 	public String promptInputPatientName() {
 		int doWhile = -1; String name = null;
 		do {
@@ -744,6 +748,8 @@ public class ConsoleUI {
 		}while(doWhile != 1);
 		return name;
 	}
+	
+	// D3(B) : Prompt User Input Patient Contact
 	public String promptInputPatientContact() {
 		int doWhile = -1; String contact = null;
 		do {
