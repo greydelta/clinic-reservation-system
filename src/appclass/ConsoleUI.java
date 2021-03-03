@@ -228,6 +228,9 @@ public class ConsoleUI {
 			case 4:
 				createPatientProfile();
 				break;
+			case 5:
+				updatePatientProfile();
+				break;
 			case 6:
 				viewPatientRecord();
 				break;
@@ -730,6 +733,23 @@ public class ConsoleUI {
     }
 
 	// D2 : Update Patient Profile Method
+	public void updatePatientProfile() {
+		String name = null, contact = null, input = null;
+    	int doWhile = -1, choice = -1;
+    	Patient exist = new Patient();
+
+    	System.out.println("\n<<Update Patient Profile>>");
+    	name = promptInputPatientName();
+    	contact = promptInputPatientContact();
+
+		exist = checkIfPatientExist(name, contact);
+    	
+		if(exist != null) {
+			System.out.println("<<Patient Exist!>>");
+		}
+		else {
+			System.out.println("<<Patient Does Not Exist!>>");
+		}
     }
 
 	// D3(A) : Prompt User Input Patient Name
