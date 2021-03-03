@@ -33,6 +33,17 @@ public class DataLists implements IDataStore{
 	public void addPatient(Patient pti){
 		this.patient.add(pti);
 	}
+	public void updatePatient(Patient existingPatient, String patient_name, String patient_contact) {
+		int count = -1;
+		for (Patient tempPatient: this.patient) {
+			++count;
+			if(tempPatient.getPatient_id() == existingPatient.getPatient_id()) { // find patient
+				this.patient.get(count).setPatient_name(patient_name);
+				this.patient.get(count).setPatient_contact(patient_contact);
+				break;
+			}
+		}
+	}
 	
 	public void addAppointment(Appointment appt){
 		this.appointment.add(appt);

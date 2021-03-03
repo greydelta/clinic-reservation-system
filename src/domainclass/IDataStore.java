@@ -9,6 +9,7 @@ public interface IDataStore {
 	
 	public void addStaff(Staff stf);
 	public void addPatient(Patient pti);
+	public void updatePatient(Patient existingPatient, String patient_name, String patient_contact);
 	
 	public void addAppointment(Appointment appt);
 	public void updateAppointmentStatus(int appointment_id, String appointment_status);
