@@ -746,6 +746,32 @@ public class ConsoleUI {
     	
 		if(exist != null) {
 			System.out.println("<<Patient Exist!>>");
+			System.out.println("<<Select component to update>>");
+			System.out.println("1. Patient Name");
+			System.out.println("2. Patient Contact");
+			choice = intChoiceInput(1, 2);
+			
+			do {
+				switch(choice) {
+				case 1:
+					System.out.print("Enter Patient Name (New): ");
+					break;
+				}
+				try {
+					input = stringInputValidation();
+					if(choice == 1) {
+						name = input;
+						contact = exist.getPatient_contact();
+					}
+				}   
+				catch (IllegalArgumentException e) {
+					System.err.println(e.getMessage());
+					bufferFor5Miliseconds();
+					doWhile = 0;} 
+			}while(doWhile != 1);
+			
+			control.updatePatient(exist, name, contact); // chng to update
+			System.out.println("\n>> Patient Profile Updated for " +name+" ("+contact+")");
 		}
 		else {
 			System.out.println("<<Patient Does Not Exist!>>");
