@@ -756,6 +756,9 @@ public class ConsoleUI {
 				case 1:
 					System.out.print("Enter Patient Name (New): ");
 					break;
+				case 2:
+					System.out.print("Enter Patient Contact (New): ");
+					break;
 				}
 				try {
 					input = stringInputValidation();
@@ -763,6 +766,11 @@ public class ConsoleUI {
 						name = input;
 						contact = exist.getPatient_contact();
 					}
+					else {
+						name = exist.getPatient_name();
+						contact = input;
+					}
+					doWhile = 1;
 				}   
 				catch (IllegalArgumentException e) {
 					System.err.println(e.getMessage());
