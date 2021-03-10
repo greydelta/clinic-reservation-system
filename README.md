@@ -76,7 +76,10 @@ Program behaviour:
   > > ✔ Allowed to: Update "Cancelled"/"Consulted" to "Cancelled"/"Consulted"
 
 - **Scenario 2: Patient has NO existing booking**
-  > > ✔ Allowed to: Update "Cancelled"/"Consulted" to "Booked" ✔ Allowed to: Update "Cancelled"/"Consulted" to "Cancelled"/"Consulted"
+
+  > > ✔ Allowed to: Update "Cancelled"/"Consulted" to "Booked"
+
+  > > ✔ Allowed to: Update "Cancelled"/"Consulted" to "Cancelled"/"Consulted"
 
 7. Since this is a runtime only application, logging in as doctor, will only display those appointments that are in the `appointment.txt` file. However, any appointment added during runtime will also be included in the core functionalities of all the functions and would be expected to behave accordingly.
 
