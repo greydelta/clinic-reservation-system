@@ -181,4 +181,4 @@ Project Link: [https://github.com/greydelta/clinic-reservation-system](https://g
 [issues-shield]: https://img.shields.io/github/issues/greydelta/clinic-reservation-system.svg?style=for-the-badge
 [issues-url]: https://github.com/greydelta/clinic-reservation-system/issues
 [product-screenshot]: images/visual.png
-[product-video]: resources/video.mp4
+[product-video]: resources/video.gif
