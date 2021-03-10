@@ -196,9 +196,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ### ![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white) : [@greydelta1](https://twitter.com/greydelta1)
 
-### ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white) : [@double.decompose](discord-tag:double.decompose)
+### ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white) : [@double.decompose](https://discord.com/users/379539771837513729)
 
-### ![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) : [dev.aw.qwe@gmail.com](https://discord.com/users/379539771837513729)
+### ![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) : [dev.aw.qwe@gmail.com](mailto:dev.aw.qwe@gmail.com)
 
 Project Link: [https://github.com/greydelta/clinic-reservation-system](https://github.com/greydelta/clinic-reservation-system)
 
