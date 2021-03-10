@@ -1,5 +1,51 @@
+/* ASSUMPTIONS
+ * 
+ * 1. Staff can't register staff
+ * 
+ * 2. There are 3 status for an appointment ("Booked"/"Cancelled"/"Consulted")
+ * 
+ * 3. 1 patient can only have 1 active appointment ("Booked"), unless "Cancelled" or "Consulted"
+ * 		if patient has at least 1 booking with status = "Booked"
+ * 			then cannot perform Create Booking or Update Booking
+ * 		unless the booking is updated to "Cancelled" or "Booked"
+ * 		Note: Staff can update "Cancelled" to "Booked"/"Consulted"
+ * 
+ * 4. Create New Patient Profile will check if profile exists
+ * 		if name && contact !=same
+ * 			Proceed
+ * 		else if name && contact == same
+ * 			Cannot proceed
+ * 		Note: Implies that 2 patients can have the same name but not the same number
+ * 
+ * 5. Update patient profile only for name/contact
+ * 
+ * 6. Update appointment only for status/date/time (cannot change doctor)
+ * 
+ * 7. Update Appointment Logic Flow 
+ * 		Scenario 1: Patient HAS existing booking
+ * 			if(selectedBooking == "Booked")
+ * 				> Update "Booked" to "Booked" = Not Allowed
+ * 				> Update "Booked" to "Cancelled"/"Consulted" = Allowed
+ * 			else if(selectedBooking != "Booked")
+ * 				> Update "Cancelled"/"Consulted" to "Booked" = Not Allowed
+ *				> Update "Cancelled"/"Consulted" to "Cancelled"/"Consulted" = Allowed
+ * 		
+ * 		Scenario 2: Patient has NO existing booking
+ * 			> Update "Cancelled"/"Consulted" to "Booked" = Allowed
+ * 			> Update "Cancelled"/"Consulted" to "Cancelled"/"Consulted" = Allowed
+ * 
+ * 7. Since this is a runtime only application, when login as doctor, can only see those appointment in txt file
+ * 
+ * 8. Almost all functions require the input of Patient's Name and Contact number before proceeding to perform its functions
+ * 
+ * 9. Staff and Doctor is classified as 1 object class with different user types
+ * 
+ * 10. All login credentials/existing patients/existing bookings can be viewed in their respective txt files
+ */
+
 package appclass;
 
+// CLICK ABOVE (LINE 1) TO EXPAND FOR MORE DETAILS
 import domainclass.*;
 import java.io.File;
 import java.io.FileNotFoundException;

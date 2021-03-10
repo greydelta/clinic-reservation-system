@@ -1,2 +1,3 @@
-# bin folder
+# exclude
 bin
+.project
