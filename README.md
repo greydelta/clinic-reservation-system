@@ -1,7 +1,13 @@
 <div id="top"></div>
 
+<!-- PROJECT SHIELDS -->
+<div align="center">
+
 [![Contributors][contributors-shield]][contributors-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url]
 
+</div>
+
+<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/greydelta/clinic-reservation-system">
@@ -28,7 +34,7 @@
 
 ## About The Project
 
-Program behaviour:
+### Program behaviour:
 
 1. Key Features of the system:
 
@@ -94,7 +100,7 @@ Program behaviour:
 
 ### Sample Output
 
-[![program sample output 1][product-video]](#)
+[![video demo][product-video]](#)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -103,6 +109,8 @@ Program behaviour:
 [![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/en/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 
 ## Getting Started
 
@@ -158,14 +166,6 @@ Program behaviour:
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Contact
-
-Your Name - [@greydelta1](https://twitter.com/greydelta1)
-
-Project Link: [https://github.com/greydelta/clinic-reservation-system](https://github.com/greydelta/clinic-reservation-system)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 <!-- CONTRIBUTING -->
 
 ## Contributing
@@ -190,6 +190,20 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- CONTACT -->
+
+## Contact
+
+### ![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white) : [@greydelta1](https://twitter.com/greydelta1)
+
+### ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white) : [@double.decompose](discord-tag:double.decompose)
+
+### ![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) : [dev.aw.qwe@gmail.com](https://discord.com/users/379539771837513729)
+
+Project Link: [https://github.com/greydelta/clinic-reservation-system](https://github.com/greydelta/clinic-reservation-system)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- ACKNOWLEDGMENTS -->
 
 ## Acknowledgments
@@ -197,16 +211,15 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/greydelta/clinic-reservation-system.svg?style=for-the-badge
 [contributors-url]: https://github.com/greydelta/clinic-reservation-system/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/greydelta/sclinic-reservation-system.svg?style=for-the-badge
+[forks-url]: https://github.com/greydelta/clinic-reservation-system/network/members
 [stars-shield]: https://img.shields.io/github/stars/greydelta/clinic-reservation-system.svg?style=for-the-badge
 [stars-url]: https://github.com/greydelta/clinic-reservation-system/stargazers
 [issues-shield]: https://img.shields.io/github/issues/greydelta/clinic-reservation-system.svg?style=for-the-badge
 [issues-url]: https://github.com/greydelta/clinic-reservation-system/issues
 [license-shield]: https://img.shields.io/github/license/greydelta/clinic-reservation-system.svg?style=for-the-badge
 [license-url]: https://github.com/greydelta/clinic-reservation-system/blob/master/LICENSE.txt
-[product-logo]: /logo.png
-[product-screenshot]: images/visual.png
 [product-video]: resources/video.gif
