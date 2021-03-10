@@ -1,1 +1,6 @@
 2001;Cancelled;30/04/2021;09:00;5548;doc;Lim T.;2;1;sickName;sickContact;
+2002;Cancelled;30/04/2021;08:00;3376;doc;George;2;3;aw;aw;
+2003;Consulted;01/04/2021;14:00;5548;doc;Lim T.;2;3;aw;aw;
+2004;Consulted;30/04/2021;10:00;5548;doc;Lim T.;2;1;sickName;sickContact;
+2005;Cancelled;30/04/2021;15:00;3376;doc;George;2;3;aw;aw;
+2006;Booked;01/04/2021;16:00;3376;doc;George;2;3;aw;aw;
