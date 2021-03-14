@@ -194,11 +194,19 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-### ![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white) : [@greydelta1](https://twitter.com/greydelta1)
+<a href="https://twitter.com/greydelta1" target="_blank">
+<img src="https://img.shields.io/badge/twitter:  @greydelta1-%231DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white" alt=twitter style="margin-bottom: 5px;"/>
+</a>
 
-### ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white) : [@double.decompose](https://discord.com/users/379539771837513729)
+<a href="https://discord.com/users/379539771837513729" target="_blank">
+<img src="https://img.shields.io/badge/discord:  @double.decompose-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white" alt=discord style="margin-bottom: 5px;"/>
+</a>
 
-### ![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white) : [dev.aw.qwe@gmail.com](mailto:dev.aw.qwe@gmail.com)
+<a href="mailto:dev.aw.qwe@gmail.com" target="_blank">
+<img src="https://img.shields.io/badge/gmail:  dev.aw.qwe@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt=mail style="margin-bottom: 5px;" />
+</a>
+
+<br />
 
 Project Link: [https://github.com/greydelta/clinic-reservation-system](https://github.com/greydelta/clinic-reservation-system)
 
