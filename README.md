@@ -17,7 +17,7 @@
 <h3 align="center">Clinic Reservation System</h3>
 
   <p align="center">
-    A reservation system to manage booking appointments
+    A CLI-based reservation system to manage booking appointments
     <br />
     <a href="https://github.com/greydelta/clinic-reservation-system"><strong>Explore the docs »</strong></a>
     <br />
@@ -100,7 +100,7 @@
 
 ### Sample Output
 
-[![video demo][product-video]](#)
+[![video demo][media-video]](#)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -194,17 +194,15 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-<a href="https://twitter.com/greydelta1" target="_blank">
-<img src="https://img.shields.io/badge/twitter:  @greydelta1-%231DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white" alt=twitter style="margin-bottom: 5px;"/>
-</a>
-
-<a href="https://discord.com/users/379539771837513729" target="_blank">
-<img src="https://img.shields.io/badge/discord:  @double.decompose-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white" alt=discord style="margin-bottom: 5px;"/>
-</a>
-
-<a href="mailto:dev.aw.qwe@gmail.com" target="_blank">
-<img src="https://img.shields.io/badge/gmail:  dev.aw.qwe@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt=mail style="margin-bottom: 5px;" />
-</a>
+<div align="center">
+  <a href="https://twitter.com/greydelta1" target="_blank">
+  <img src="https://img.shields.io/badge/twitter:  @greydelta1-%231DA1F2.svg?style=for-the-badge&logo=twitter&logoColor=white" alt=twitter style="margin-bottom: 5px;"/>
+  </a> <a href="https://discord.com/users/379539771837513729" target="_blank">
+  <img src="https://img.shields.io/badge/discord:  @double.decompose-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white" alt=discord style="margin-bottom: 5px;"/>
+  </a> <a href="mailto:dev.aw.qwe@gmail.com" target="_blank">
+  <img src="https://img.shields.io/badge/gmail:  dev.aw.qwe@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt=mail style="margin-bottom: 5px;" />
+  </a>
+</div>
 
 <br />
 
@@ -230,4 +228,4 @@ Project Link: [https://github.com/greydelta/clinic-reservation-system](https://g
 [issues-url]: https://github.com/greydelta/clinic-reservation-system/issues
 [license-shield]: https://img.shields.io/github/license/greydelta/clinic-reservation-system.svg?style=for-the-badge
 [license-url]: https://github.com/greydelta/clinic-reservation-system/blob/master/LICENSE.txt
-[product-video]: resources/video.gif
+[media-video]: resources/video.gif
