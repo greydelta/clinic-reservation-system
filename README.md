@@ -1,9 +1,10 @@
 <div id="top"></div>
 
 <!-- PROJECT SHIELDS -->
+
 <div align="center">
 
-[![Contributors][contributors-shield]][contributors-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url]
+[![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![MIT License][license-shield]][license-url]
 
 </div>
 
@@ -100,7 +101,11 @@
 
 ### Sample Output
 
+<div align="center">
+
 [![video demo][media-video]](#)
+
+</div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -220,7 +225,7 @@ Project Link: [https://github.com/greydelta/clinic-reservation-system](https://g
 
 [contributors-shield]: https://img.shields.io/github/contributors/greydelta/clinic-reservation-system.svg?style=for-the-badge
 [contributors-url]: https://github.com/greydelta/clinic-reservation-system/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/greydelta/sclinic-reservation-system.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/greydelta/clinic-reservation-system.svg?style=for-the-badge
 [forks-url]: https://github.com/greydelta/clinic-reservation-system/network/members
 [stars-shield]: https://img.shields.io/github/stars/greydelta/clinic-reservation-system.svg?style=for-the-badge
 [stars-url]: https://github.com/greydelta/clinic-reservation-system/stargazers
